@@ -2,6 +2,14 @@ const fs = require("fs");
 
 const QUOTES_DIR = process.argv[2];
 
+/*
+console.log("Process arguments:\n");
+for (const ff of process.argv) {
+    console.log(ff);
+}
+console.log("\n");
+*/
+
 fs.readdir(QUOTES_DIR, { withFileTypes: true }, (err, files) => {
     if (err) {
         console.error(`Error while reading ${QUOTES_DIR} directory`);
