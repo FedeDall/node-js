@@ -4,6 +4,8 @@ const host = "127.0.0.1";
 const port = 3000;
 
 const server = http.createServer((req, res) => {
+
+    console.log(req.headers);
     const acceptJson = req.headers.accept === "application/json";
     const acceptText = req.headers.accept === "text/plain";
 
